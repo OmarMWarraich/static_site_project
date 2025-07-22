@@ -220,7 +220,11 @@ main {
 }
 
 .feature-card {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7));
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.9),
+    rgba(255, 255, 255, 0.7)
+  );
   border-radius: 16px;
   padding: 2rem;
   text-align: center;
@@ -464,7 +468,8 @@ li {
 }
 
 @keyframes float {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
   }
   50% {
@@ -521,7 +526,11 @@ li {
 .hero {
   text-align: center;
   padding: 4rem 0;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.05)
+  );
   border-radius: 20px;
   margin-bottom: 3rem;
 }
@@ -548,7 +557,11 @@ li {
 .stat-card {
   text-align: center;
   padding: 2rem;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7));
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.9),
+    rgba(255, 255, 255, 0.7)
+  );
   border-radius: 16px;
   backdrop-filter: blur(10px);
 }

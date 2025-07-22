@@ -22,13 +22,14 @@
         {{{content}}}
       </div>
     </main>
-    
+
     <footer>
       <div class="container">
         <div class="footer-content">
           <div class="footer-section">
             <h3>Static Site Solutions</h3>
-            <p>Building fast, secure, and scalable websites with modern static site generation technology.</p>
+            <p>Building fast, secure, and scalable websites with modern static
+              site generation technology.</p>
           </div>
           <div class="footer-section">
             <h3>Quick Links</h3>
@@ -65,65 +66,38 @@
             <a href="#" class="social-link">💼</a>
             <a href="#" class="social-link">🐙</a>
           </div>
-          <p>&copy; 2025 Static Site Solutions. Built with ❤️ using Eleventy and Handlebars.</p>
+          <p>&copy; 2025 Static Site Solutions. Built with ❤️ using Eleventy and
+            Handlebars.</p>
         </div>
       </div>
     </footer>
-    
+
     <script>
       // Set active navigation state
-      document.addEventListener('DOMContentLoaded', function() {
-        const currentPath = window.location.pathname;
-        const navLinks = document.querySelectorAll('nav a');
-        
-        navLinks.forEach(link => {
-          const href = link.getAttribute('href');
-          if (currentPath === href || (currentPath === '/' && href === '/') || 
-              (currentPath.includes('/about/') && href === '/about/') ||
-              (currentPath.includes('/pricing/') && href === '/pricing/') ||
-              (currentPath.includes('/contact/') && href === '/contact/')) {
-            link.classList.add('active');
-          }
-        });
-
-        // Add animation classes to elements as they come into view
-        const observerOptions = {
-          threshold: 0.1,
-          rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('animate-fadeInUp');
-            }
-          });
-        }, observerOptions);
-
-        // Observe cards and other elements
-        document.querySelectorAll('.card, .feature-card, .pricing-card').forEach(el => {
-          observer.observe(el);
-        });
-
-        // Simple accordion functionality
-        document.querySelectorAll('.accordion-header').forEach(header => {
-          header.addEventListener('click', () => {
-            const item = header.parentElement;
-            const content = item.querySelector('.accordion-content');
-            const icon = header.querySelector('.accordion-icon');
-            
-            item.classList.toggle('active');
-            
-            if (item.classList.contains('active')) {
-              content.style.display = 'block';
-              icon.style.transform = 'rotate(180deg)';
-            } else {
-              content.style.display = 'none';
-              icon.style.transform = 'rotate(0deg)';
-            }
-          });
-        });
-      });
+      document.addEventListener('DOMContentLoaded', function() { const
+      currentPath = window.location.pathname; const navLinks =
+      document.querySelectorAll('nav a'); navLinks.forEach(link => { const href
+      = link.getAttribute('href'); if (currentPath === href || (currentPath ===
+      '/' && href === '/') || (currentPath.includes('/about/') && href ===
+      '/about/') || (currentPath.includes('/pricing/') && href === '/pricing/')
+      || (currentPath.includes('/contact/') && href === '/contact/')) {
+      link.classList.add('active'); } }); // Add animation classes to elements
+      as they come into view const observerOptions = { threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px' }; const observer = new
+      IntersectionObserver((entries) => { entries.forEach(entry => { if
+      (entry.isIntersecting) { entry.target.classList.add('animate-fadeInUp'); }
+      }); }, observerOptions); // Observe cards and other elements
+      document.querySelectorAll('.card, .feature-card,
+      .pricing-card').forEach(el => { observer.observe(el); }); // Simple
+      accordion functionality
+      document.querySelectorAll('.accordion-header').forEach(header => {
+      header.addEventListener('click', () => { const item =
+      header.parentElement; const content =
+      item.querySelector('.accordion-content'); const icon =
+      header.querySelector('.accordion-icon'); item.classList.toggle('active');
+      if (item.classList.contains('active')) { content.style.display = 'block';
+      icon.style.transform = 'rotate(180deg)'; } else { content.style.display =
+      'none'; icon.style.transform = 'rotate(0deg)'; } }); }); });
     </script>
   </body>
 </html>
