@@ -61,10 +61,10 @@
         </div>
         <div class="footer-bottom">
           <div class="social-links">
-            <a href="#" class="social-link">📘</a>
-            <a href="#" class="social-link">🐦</a>
-            <a href="#" class="social-link">💼</a>
-            <a href="#" class="social-link">🐙</a>
+            <a href="#" class="social-link" aria-label="Facebook">📘</a>
+            <a href="#" class="social-link" aria-label="Twitter">🐦</a>
+            <a href="#" class="social-link" aria-label="LinkedIn">💼</a>
+            <a href="#" class="social-link" aria-label="GitHub">🐙</a>
           </div>
           <p>&copy; 2025 Static Site Solutions. Built with ❤️ using Eleventy and
             Handlebars.</p>
@@ -77,10 +77,10 @@
       document.addEventListener('DOMContentLoaded', function() { const
       currentPath = window.location.pathname; const navLinks =
       document.querySelectorAll('nav a'); navLinks.forEach(link => { const href
-      = link.getAttribute('href'); if (currentPath === href || (currentPath ===
+      = link.getAttribute('href'); if ( currentPath === href || (currentPath ===
       '/' && href === '/') || (currentPath.includes('/about/') && href ===
       '/about/') || (currentPath.includes('/pricing/') && href === '/pricing/')
-      || (currentPath.includes('/contact/') && href === '/contact/')) {
+      || (currentPath.includes('/contact/') && href === '/contact/') ) {
       link.classList.add('active'); } }); // Add animation classes to elements
       as they come into view const observerOptions = { threshold: 0.1,
       rootMargin: '0px 0px -50px 0px' }; const observer = new
